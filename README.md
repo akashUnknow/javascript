@@ -26,3 +26,12 @@ object
 
 undefined means a variable has been declared but has not yet been assigned a value, whereas null is an assignment value, meaning that a variable has been declared and given the value of null
 
+====================================================================================
+function
+typeOf
+33==> number
+Number("33") ==> number 
+NaN==> not a number 
+null==> 0;
+undefine==> Nan
+boolean==>1,0

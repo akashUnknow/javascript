@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataGenConverter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input name="input" id="input" cols="30" rows="10"/>
+        </div>
+        <div class="button">
+            <button  class="HextoASCII" onclick="HextoASCII()">Hex to ASCII</button>
+            <button type="submit" onclick="convertButton()">ASCII to Hex</button>
+            <button type="submit" onclick="convertButton()">Swap Value</button>
+            <button type="submit" onclick="convertButton()">Swap with Sapce</button>
+            <button type="submit" onclick="convertButton()">Swap without</button>
+            <button type="submit" onclick="convertButton()">Remove Sapce</button>
+            <button type="submit" onclick="convertButton()">Add Sapce</button>
+        </div>
+        <div class="input output">
+           
+            <input name="input" id="output" cols="30" rows="10"></input>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

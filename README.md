@@ -73,3 +73,12 @@ dom
 =>innertext
 =>queryslector
 =>queryslectorAll
+======================================================================================
+setinterval()
+======================================================================================
+event
+event popugation and even bubling
+======================================================================================
+asyns javascript
+defult ==> syncy, simgle thread
+js engine => web api==>queue (setinterval, fetch , timeoutfunction)

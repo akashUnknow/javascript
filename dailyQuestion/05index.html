@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+</head>
+<body>
+     <!-- Code starts from here -->
+     <div id="countdown" class="countdown">
+        <h2>Countdown Timer</h2>
+        <p id="timer">00:00:00</p>
+      </div>
+      <!-- Code ends here -->
+</body>
+<script>
+     const timerElement = document.getElementById("timer");
+    let time = 3600; // Initial time in seconds (1 hour)
+    
+    function updateTime() {
+        const hours = Math.floor(time / 3600); // Calculate hours
+        const minutes = Math.floor((time % 3600) / 60); // Calculate minutes
+        const seconds = Math.floor(time % 60); // Calculate seconds
+
+        // Update the text content of the timer
+        timerElement.textContent = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        
+        // Decrease the time
+        if (time > 0) {
+            time--;
+        } else {
+            clearInterval(timerInterval); // Stop the timer when it reaches 0
+        }
+    }
+
+    const timerInterval = setInterval(updateTime, 1000); // Update every second
+    updateTime(); // Initial call to display the timer immediately
+</script>
+</html>

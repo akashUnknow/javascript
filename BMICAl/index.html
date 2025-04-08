@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <form action="">
+        <div class="height">
+            <label for="height">height</label>
+            <input type="text" id="height">
+        </div>
+    
+        
+        <div class="wieght">
+            <label for="wieght">height</label>
+            <input type="text" id="wieght">
+        </div>
+    
+        <button type="submit" id="submit">submit</button>
+        <p id="result"> </p>
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('submit',(e)=>{
+            e.preventDefault()
+            const height=document.getElementById("height").value;
+            const wieght=document.getElementById("wieght").value;
+            const Bmi=wieght/((height)*(height))
+            console.log(Bmi)
+            
+            document.getElementById('result').innerHTML="{Bmi}"
+        })
+
+    </script>
+    
+</body>
+</html>

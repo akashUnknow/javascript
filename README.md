@@ -83,3 +83,10 @@ asyns javascript
 defult ==> syncy, simgle thread
 js engine => web api==>queue (setinterval, fetch , timeoutfunction)
 =====================================================================================
+promis, async ,await ,fetch
+=====================================================================================
+class: oop
+javascript and class
+javascript is prototype-based language
+=====================================================================================
+prototype

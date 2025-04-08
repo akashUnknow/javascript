@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+</head>
+<body>
+    <label for="input">Enter Text:</label>
+    <input autocomplete="off" id="input" maxlength="50" placeholder="Enter Text:"/>
+    <p>Remaning char length:<span id="Count">50</span></p>
+</body>
+<script>
+     const textinput = document.getElementById('input');  // Corrected here
+     const count = document.getElementById('Count');  // Corrected here
+   textinput.addEventListener("input", () => {
+  const remaining = 50 - textinput.value.length;
+  count.textContent = remaining;
+});
+</script>
+</html>

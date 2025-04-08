@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+</head>
+<style>
+    .highlight {
+  background-color: yellow;
+}
+</style>
+<body>
+    <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+    <ul id="itemList" class="list-group mt-3">
+        <li class="list-group-item">Apple</li>
+        <li class="list-group-item">Banana</li>
+        <li class="list-group-item">Cherry</li>
+        <li class="list-group-item">Date</li>
+        <li class="list-group-item">Elderberry</li>
+        <li class="list-group-item">Fig</li>
+        <li class="list-group-item">Grape</li>
+    </ul>
+</body>
+<script>
+    document.getElementById('searchInput').addEventListener("input",function(){
+      const searchTerm = this.value.toLowerCase();
+      const items=document.querySelectorAll('#itemList .list-group-item')
+      items.forEach(item => {
+        const text=item.textContent.toLowerCase();
+        const index=text.indexOf(searchTerm);
+        if(index !== -1 && searchTerm !==""){
+          const highlightedText=item.textContent.substring(index,index + searchTerm.length)
+
+          item.innerHTML=item.textContent.replace(highlightedText,
+            `<span class="highlight">${highlightedText}</span>`
+          )
+          console.log([text,highlightedText,index,(index + searchTerm.length)])
+        }else{
+          item.innerHTML = item.textContent;
+        }
+      });
+    })
+</script>
+</html>
